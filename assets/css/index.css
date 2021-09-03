@@ -1,0 +1,103 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: #F5F7FB;
+  font-family: sans-serif;
+}
+
+.index_page {
+  width: 100%;
+  height: 100%;
+}
+
+.index_page_header {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #d1d1d1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+  height: 100%;
+  margin-left: 50px;
+  color: #08003C;
+}
+
+.logo img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.logo a {
+  color: #009CF8;
+}
+
+.index_page_header_menu {
+  margin-left: 100px;
+  font-size: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.index_page_header_menu_button {
+  cursor: pointer;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 40px;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+.index_page_body {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.index_page_body_logo {
+  width: 100%;
+  background-color: #4583FE;
+  padding: 50px 0;
+}
+
+.index_page_body_logo .index_page_body_logo_row {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.index_page_body_logo .index_page_body_logo_row h1 {
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 35px;
+  margin-top: 0;
+  color: white;
+}
+
+.index_page_body_logo .index_page_body_logo_row p {
+  padding-top: 0;
+  margin-top: 0;
+  margin-top: 10px;
+  margin-left: 4px;
+  font-size: 20px;
+  color: #caedff;
+}
+/*# sourceMappingURL=index.css.map */
