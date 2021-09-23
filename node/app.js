@@ -47,6 +47,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/vyberi_store", { useNewUrlParser: tr
 
 
 var components_html = null;
+var vk_html         = null;
 
 var load_helpers = () =>
 {
@@ -55,6 +56,13 @@ var load_helpers = () =>
         components_html = require('./types/main');
         components_html.init({
             Member: Member,
+        });
+    }
+    if(vk_html == null) 
+    {
+        vk_html = require('./types/vk_bot');
+        vk_html.init({
+            
         });
     }
 }
