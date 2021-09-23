@@ -5,7 +5,7 @@ const bodyParser                    = require('body-parser');
 
 const models                        = require('./models');
 
-const Member                          = mongoose.model('Member');  
+const Member                        = mongoose.model('Member');  
 
 var secure;
 var server;
@@ -77,7 +77,6 @@ io.on('connection', function(socket) {
 });
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/add_member', async (req, res) => 
 {
