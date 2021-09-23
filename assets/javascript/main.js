@@ -7,7 +7,7 @@ var imSocket = null;
 
 window.global_data = {
     data_url_localhost: 'http://localhost:3000',
-    data_url_server: 'https://skin-win.ru',
+    data_url_server: 'https://vyberi.store',
     data_url_localhost_non: 'http://localhost',
 };
 
