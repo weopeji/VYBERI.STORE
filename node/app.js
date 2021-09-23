@@ -27,7 +27,7 @@ if (secure)
 {
     console.log('localhost now!');
     params = {
-        cors: {
+        cors: { 
             origin: "http://localhost",
             methods: ["GET", "POST"]
         }
