@@ -78,7 +78,7 @@ io.on('connection', function(socket) {
 
 app.use(bodyParser.json())
 
-app.post('/add_member', async (req, res) => 
+app.post('/add_member.io', async (req, res) => 
 {
     var _data       = req.body;
     var _secret     = "i_opeji";
