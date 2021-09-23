@@ -7,6 +7,7 @@ const path                          = require('path');
 const bodyParser                    = require('body-parser');
 var util                            = require('util');
 var encoder                         = new util.TextEncoder('utf-8');
+let { TextEncoder, TextDecoder }    = require('sdk/io/buffer')
 
 const models                        = require('./models');
 
