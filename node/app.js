@@ -4,8 +4,9 @@ const mongoose                      = require('mongoose');
 const fs                            = require("fs");
 const https                         = require('https');
 const path                          = require('path');
-const bodyParser                    = require('body-parser')
-const multiparty                    = require('multiparty');
+const bodyParser                    = require('body-parser');
+var util                            = require('util');
+var encoder                         = new util.TextEncoder('utf-8');
 
 const models                        = require('./models');
 
