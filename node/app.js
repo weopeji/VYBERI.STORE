@@ -1,3 +1,5 @@
+const util                          = require('util');
+const encoder                       = new util.TextEncoder('utf-8');
 const express                       = require('express');
 const app                           = express();
 const mongoose                      = require('mongoose');
@@ -5,8 +7,6 @@ const fs                            = require("fs");
 const https                         = require('https');
 const path                          = require('path');
 const bodyParser                    = require('body-parser');
-const util                          = require('util');
-const encoder                       = new util.TextEncoder('utf-8');
 
 const models                        = require('./models');
 
