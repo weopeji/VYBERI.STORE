@@ -14,6 +14,10 @@ function privateInit(initPlagins)
     Member = initPlagins.Member;
 }
 
+var action_linker = 
+{
+    "getAllMembers": getAllMembers,
+}
 
 var privat_index_page = function(socket,data,callback) {
     var action = data.action;
@@ -26,11 +30,6 @@ var privat_index_page = function(socket,data,callback) {
             }
         });
     }
-}
-
-var action_linker = 
-{
-    "getAllMembers": getAllMembers,
 }
 
 async function getAllMembers(socket,data,callback)
