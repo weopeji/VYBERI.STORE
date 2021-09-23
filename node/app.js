@@ -1,5 +1,4 @@
-const util                          = require('util');
-let { TextEncoder, TextDecoder }    = require('sdk/io/buffer')
+global.TextEncoder                  = require("util").TextEncoder; 
 const encoder                       = new util.TextEncoder('utf-8');
 const express                       = require('express');
 const app                           = express();
