@@ -2,13 +2,14 @@ const express                       = require('express');
 const app                           = express();
 const mongoose                      = require('mongoose');
 const bodyParser                    = require('body-parser');
+const request                       = require('request')
 
 const models                        = require('./models');
 
 const Member                        = mongoose.model('Member');  
+const News                          = mongoose.model('News'); 
 
-var secure;
-var server;
+var secure, server;
 
 if(process.platform == 'win32') {secure = false} else {secure = true};
 
@@ -47,7 +48,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/vyberi_store", { useNewUrlParser: tr
 
 
 var components_html = null;
-var vk_html         = null;
 
 var load_helpers = () =>
 {
@@ -55,14 +55,9 @@ var load_helpers = () =>
     {
         components_html = require('./types/main');
         components_html.init({
+            request: request,
             Member: Member,
-        });
-    }
-    if(vk_html == null) 
-    {
-        vk_html = require('./types/vk_bot');
-        vk_html.init({
-            
+            News: News,
         });
     }
 }
@@ -83,41 +78,3 @@ io.on('connection', function(socket) {
         components_page(this, data, callback);
     });
 });
-
-app.use(bodyParser.json())
-
-app.post('/add_member.io', async (req, res) => 
-{
-    var _data       = req.body;
-    var _secret     = "i_opeji";
-
-    var img     = _data.img;
-    var rate    = _data.rate;
-    var age     = _data.age;
-    var money   = _data.money;
-    var percent = _data.percent;
-    var url     = _data.url;
-    var my_rate = _data.my_rate;
-    var name    = _data.name;
-
-    if(_secret == _data.secret) 
-    {
-        await Member.create({
-            name: name,
-            img: img,
-            rate: rate,
-            age: age,
-            money: money,
-            percent: percent,
-            url: url,
-            my_rate: my_rate,
-        }).then(data => {
-            console.log(data);
-        })
-
-        res.sendStatus(200) 
-    } else {
-        res.sendStatus(404) 
-    }
-    
-})

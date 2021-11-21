@@ -95,6 +95,8 @@ async function postData(url, data) {
     return await response.json();
 }
 
+var getStatusConnect = false;
+
 function io_connect(callback) 
 {
     delete imSocket;
@@ -111,7 +113,12 @@ function io_connect(callback)
         // });
     }
     imSocket.on('connect', function() {
+        if(getStatusConnect)
+        {
+            location.reload();
+        }
         console.log("Сервер подключен к: " + url);
+        getStatusConnect = true;
         if(callback) {
             callback();
         }
